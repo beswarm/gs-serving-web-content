@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        localStorage.setItem("fuse","-");
+        var maxTimes=10;
+        var i=0;
+
+        while(i<maxTimes){
+            var fuse=localStorage.getItem("fuse");
+            i++;
+            try{
+                var fuse=localStorage.setItem("fuse",fuse+fuse);
+            }catch (e ){
+
+                alert("Your browser blew up at "+fuse.length+" with exception: "+e);
+                break;
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
